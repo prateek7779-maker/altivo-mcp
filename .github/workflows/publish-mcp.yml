@@ -1,0 +1,27 @@
+# Publishes server.json to the official MCP Registry (registry.modelcontextprotocol.io) with GitHub OIDC.
+# Runs on demand and whenever server.json changes on main. Bump "version" in server.json for each new listing.
+name: Publish to MCP Registry
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [server.json]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install mcp-publisher
+        run: |
+          OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+          ARCH=$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')
+          curl -L "https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_${OS}_${ARCH}.tar.gz" | tar xz mcp-publisher
+      - name: Validate
+        run: ./mcp-publisher validate || true
+      - name: Log in with GitHub OIDC
+        run: ./mcp-publisher login github-oidc
+      - name: Publish
+        run: ./mcp-publisher publish
