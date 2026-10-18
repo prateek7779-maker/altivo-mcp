@@ -1,0 +1,7 @@
+{
+  "name": "altivo",
+  "version": "1.0.0",
+  "description": "Live private jet empty legs, charter estimates in local currency and quote requests from Altivo Jets.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": { "altivo": { "httpUrl": "https://altivojets.com/mcp/" } }
+}

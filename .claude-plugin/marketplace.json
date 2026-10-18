@@ -1,0 +1,5 @@
+{
+  "name": "altivo",
+  "owner": { "name": "Altivo Jets", "email": "hello@altivojets.com" },
+  "plugins": [{ "name": "altivo", "source": "./plugins/altivo", "description": "Live private jet empty legs, charter estimates in local currency and quote requests from Altivo Jets." }]
+}

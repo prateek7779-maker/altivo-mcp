@@ -1,0 +1,8 @@
+{
+  "name": "altivo",
+  "version": "1.0.0",
+  "description": "Live private jet empty legs, charter estimates in local currency and quote requests from Altivo Jets.",
+  "author": { "name": "Altivo Jets", "email": "hello@altivojets.com" },
+  "homepage": "https://altivojets.com/developers/",
+  "license": "MIT"
+}
