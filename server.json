@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
   "name": "io.github.prateek7779-maker/altivo-mcp",
   "title": "Altivo Jets",
-  "description": "Live private jet empty legs, charter estimates in local currency across 12 countries, and quote requests to a charter broker desk.",
+  "description": "Live private jet empty legs, charter estimates in 12 countries and quote requests.",
   "version": "1.0.0",
   "websiteUrl": "https://altivojets.com/developers/",
   "remotes": [
